@@ -17,6 +17,7 @@ if [ -d "$CODEX_SKILLS" ]; then
     cp -r "$SKILL_DIR/references" "$CODEX_SKILLS/" 2>/dev/null || true
     cp -r "$SKILL_DIR/scripts" "$CODEX_SKILLS/" 2>/dev/null || true
     cp -r "$SKILL_DIR/agents" "$CODEX_SKILLS/" 2>/dev/null || true
+    cp "$SKILL_DIR/CLAUDE.md" "$CODEX_SKILLS/" 2>/dev/null || true
 else
     echo "  Creating skill at $CODEX_SKILLS"
     mkdir -p "$CODEX_SKILLS"
@@ -24,6 +25,7 @@ else
     cp -r "$SKILL_DIR/references" "$CODEX_SKILLS/"
     cp -r "$SKILL_DIR/scripts" "$CODEX_SKILLS/"
     cp -r "$SKILL_DIR/agents" "$CODEX_SKILLS/"
+    cp "$SKILL_DIR/CLAUDE.md" "$CODEX_SKILLS/"
 fi
 echo "  ✓ Codex skill installed"
 
@@ -31,9 +33,9 @@ echo "  ✓ Codex skill installed"
 echo ""
 echo "[2/3] Claude Code instructions..."
 echo "  To enable for Claude Code, copy CLAUDE.md to your project root:"
-echo "    cp $SKILL_DIR/CLAUDE.md /your-project/CLAUDE.md"
+echo "    cp $CODEX_SKILLS/CLAUDE.md ./CLAUDE.md"
 echo "  Or for all projects (Claude Code global config):"
-echo "    cp $SKILL_DIR/CLAUDE.md ~/.claude/CLAUDE.md"
+echo "    cp $CODEX_SKILLS/CLAUDE.md ~/.claude/CLAUDE.md"
 
 # 3. Project setup
 echo ""
