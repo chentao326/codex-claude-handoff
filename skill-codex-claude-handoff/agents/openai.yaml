@@ -1,3 +1,0 @@
-display_name: Codex ⇄ Claude Handoff
-short_description: Automated 6-phase collaborative workflow between Codex and Claude Code
-default_prompt: Detect current handoff phase and execute the appropriate action

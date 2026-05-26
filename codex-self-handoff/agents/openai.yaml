@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Self Handoff"
+  short_description: "6-phase self-handoff where Codex acts as architect and builder"
+  default_prompt: "Detect handoff phase and execute as both architect and builder"
