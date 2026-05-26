@@ -33,7 +33,7 @@ echo "[2/3] Claude Code instructions..."
 echo "  To enable for Claude Code, copy CLAUDE.md to your project root:"
 echo "    cp $SKILL_DIR/CLAUDE.md /your-project/CLAUDE.md"
 echo "  Or for all projects (Claude Code global config):"
-echo "    cat $SKILL_DIR/CLAUDE.md >> ~/.claude/CLAUDE.md"
+echo "    cp $SKILL_DIR/CLAUDE.md ~/.claude/CLAUDE.md"
 
 # 3. Project setup
 echo ""

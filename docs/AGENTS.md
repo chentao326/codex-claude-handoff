@@ -25,7 +25,7 @@ Spec ──→ Plan ──→ Build ──→ Review ──→ Polish ──→ 
 
 ### 阶段 2: Plan（任务拆解）— Claude Code
 - 输入: `specs/<feature-name>.md`
-- 输出: `specs/<feature-name>.md`（追加任务清单）
+- 输出: `handoff/plan-ready.json`
 - 产物: 分步骤任务列表，每个任务标注优先级、预估复杂度、依赖关系
 - 最后写入: `handoff/plan-ready.json`（交接信号）
 

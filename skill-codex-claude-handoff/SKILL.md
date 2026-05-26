@@ -28,7 +28,7 @@ If you are Claude Code: DO NOT write implementation code unless reviewing/planni
 Run this command to detect the current phase:
 
 ```bash
-ls handoff/*.json 2>/dev/null && cat handoff/*.json 2>/dev/null || echo "NO_HANDOFF_DIR"
+ls handoff/*.json 2>/dev/null | tail -1 | xargs cat 2>/dev/null || echo "NO_HANDOFF_DIR"
 ```
 
 Determine phase by checking file existence in order:
