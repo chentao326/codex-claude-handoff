@@ -36,7 +36,7 @@ cd skill-codex-claude-handoff && bash install.sh
 
 安装脚本会做三件事：
 
-1. **Codex**：复制 `SKILL.md`、`references/`、`scripts/`、`agents/` 到 `~/.codex/skills/codex-claude-handoff/`
+1. **Codex**：复制 `SKILL.md`、`references/`、`scripts/`、`agents/`、`CLAUDE.md` 到 `~/.codex/skills/codex-claude-handoff/`
 2. **Claude Code**：输出配置指引（手动操作）
 3. **项目初始化**：输出目录初始化指引
 
@@ -45,13 +45,13 @@ cd skill-codex-claude-handoff && bash install.sh
 **方案 A — 项目级**（推荐，每个项目独立配置）：
 
 ```bash
-cp skill-codex-claude-handoff/CLAUDE.md /your-project/CLAUDE.md
+cp ~/.codex/skills/codex-claude-handoff/CLAUDE.md ./CLAUDE.md
 ```
 
 **方案 B — 全局**（所有项目生效）：
 
 ```bash
-cp skill-codex-claude-handoff/CLAUDE.md ~/.claude/CLAUDE.md
+cp ~/.codex/skills/codex-claude-handoff/CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
 ### 项目初始化
@@ -62,7 +62,7 @@ cp skill-codex-claude-handoff/CLAUDE.md ~/.claude/CLAUDE.md
 cd your-project
 mkdir -p specs handoff
 echo 'handoff/' >> .gitignore
-cp /path/to/docs/AGENTS.md ./AGENTS.md
+cp ~/.codex/skills/codex-claude-handoff/docs/AGENTS.md ./AGENTS.md
 ```
 
 ## 快速开始

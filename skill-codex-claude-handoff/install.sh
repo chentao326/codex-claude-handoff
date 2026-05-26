@@ -18,6 +18,7 @@ if [ -d "$CODEX_SKILLS" ]; then
     cp -r "$SKILL_DIR/scripts" "$CODEX_SKILLS/" 2>/dev/null || true
     cp -r "$SKILL_DIR/agents" "$CODEX_SKILLS/" 2>/dev/null || true
     cp "$SKILL_DIR/CLAUDE.md" "$CODEX_SKILLS/" 2>/dev/null || true
+    cp -r "$SKILL_DIR/../docs" "$CODEX_SKILLS/" 2>/dev/null || true
 else
     echo "  Creating skill at $CODEX_SKILLS"
     mkdir -p "$CODEX_SKILLS"
@@ -26,6 +27,7 @@ else
     cp -r "$SKILL_DIR/scripts" "$CODEX_SKILLS/"
     cp -r "$SKILL_DIR/agents" "$CODEX_SKILLS/"
     cp "$SKILL_DIR/CLAUDE.md" "$CODEX_SKILLS/"
+    cp -r "$SKILL_DIR/../docs" "$CODEX_SKILLS/"
 fi
 echo "  ✓ Codex skill installed"
 
@@ -43,7 +45,7 @@ echo "[3/3] Project setup..."
 echo "  In each project, run:"
 echo "    mkdir -p specs handoff"
 echo "    echo 'handoff/' >> .gitignore"
-echo "    cp $SKILL_DIR/../AGENTS.md ./AGENTS.md"
+echo "    cp $CODEX_SKILLS/docs/AGENTS.md ./AGENTS.md"
 echo ""
 echo "=== Installation Complete ==="
 echo ""
